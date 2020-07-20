@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+table td{
+    width: 100px;
+    text-align: center;
+}
+
+table td h3{
+    width: 200px;
+}
+
+.b1{
+    color: white;
+    background-color: green;
+}
+
+.b2{
+    color: white;
+    background-color: red;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+
+    
+ <!-- Task 1 -->
+<br><br><br>
+<div style="border: 2px solid red; text-align: center; width: 300px;margin:0px auto;padding: 20px;">
+    <form onsubmit="showResult()">
+        <label for="username">UserName:</label> <br>
+        <input type="text" id="ip1"><br>
+        <label for="pass">Passwrord:</label><br>
+        <input type="password" id="p1"><br>
+        <label for="reenter">Confirm Password:</label><br>
+        <input type="password" id="p2"><br><br>
+        <input id="btn" style="color: aliceblue ; background-color: green; " type="submit">
+    </form>
+</div>
+<br><br><br>
+
+<p id="show"></p>
+ 
+
+
+
+<!-- Task 2 -->
+<p id="pp">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sapiente ar ........<a href="#" onclick="showAll()">Read More</a></p>
+
+<br><br>
+
+<!-- Task 3 -->
+
+<table border="2px solid black" align="center" id="myTable">
+    <tr>
+        <td colspan="4"><h2>Students Details</h2></td>
+    </tr>
+    <tr class="tr1"
+    ><td>Name:</td
+        ><td>Hamza</td
+        ><td><button class="b1" onclick="editName()">Edit</button></td
+        ><td onclick="delRow(1)"><button class="b2">Delete</button></td
+    ></tr>
+
+    <tr id="tr2">
+        <td>Roll no:</td>
+        <td>2597</td>
+        <td><button class="b1" onclick="editRoll()">Edit</button></td>
+        <td onclick="delRow(2)"><button class="b2">Delete</button></td>
+    </tr>
+
+    <tr id="tr3">
+        <td>Class:</td>
+        <td>BScS</td>
+        <td><button class="b1" onclick="editClass()">Edit</button></td>
+        <td onclick="delRow(3)"><button class="b2">Delete</button></td>
+    </tr>
+
+    <tr id="tr4">
+        <td>Degree Type:</td>
+        <td>Hons</td>
+        <td><button class="b1" onclick="editType()">Edit</button></td>
+        <td onclick="delRow(4)"><button class="b2">Delete</button></td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+<script>
+
+
+
+function showResult(){
+    var a = document.getElementById("ip1").value;
+
+     document.write("<table>" + "<tr>" + "<td>" + "Username: " + "</td>" + "<td>" + a  + "</td>" + "</tr>" + "</br>"  + "<tr>" + "<td>" + "Password: " + "</td>" + "<td>" + b  + "</td>" + "</tr>"  + "</br>"  + "<tr>" + "<td>" + "Reenter Password: " + "</td>" + "<td>" + c  + "</td>" + "</tr>" +  "</table>" )
+
+    var b = document.getElementById("p1").value;
+
+    var c = document.getElementById("p2").value;
+}
+
+
+   
+function showAll(){
+    var d = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores cupiditate animi quod aliquid dolore enim ab reiciendis, quae temporibus at et quisquam veritatis, sunt nemo consequuntur quis? Architecto, quas."
+document.getElementById("pp").innerHTML = d;
+
+}
+
+
+function delRow(r){
+    document.getElementById("myTable").deleteRow(r);
+
+}
+
+function editName(){
+ var e =  document.querySelectorAll("tr");
+ 
+ var z = prompt("Enter your Specific Name", "Hamza")
+ console.log(e[1].childNodes[1].innerHTML = z )}    
+    
+
+ function editRoll(){
+ var e =  document.querySelectorAll("tr");
+ 
+ var z1 = prompt("Enter your Roll no","2597")
+ console.log(e[2].childNodes[2].innerHTML = z1 )}    
+  
+
+ function editClass(){
+ var e =  document.querySelectorAll("tr");
+ 
+ var z = prompt("Enter your Class", "BScS")
+ console.log(e[3].childNodes[3].innerHTML = z )}    
+  
+
+ function editType(){
+ var e =  document.querySelectorAll("tr");
+ 
+ var z = prompt("Enter your Degree Type", "Hons")
+ console.log(e[4].childNodes[4].innerHTML = z )}    
+  
+    
+    
+    
+    </script>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="p1"></p>
+
+</body>
+<script>
+
+
+
+//Task 1
+
+var no = prompt("Enter a Number")
+
+var pw = prompt("Enter a power")
+
+
+function raise(no,pw){
+    for (var i =0 ; i<pw;i++){
+        // for(var j = 0 ; j < no;j++){
+            document.write(no*pw)
+        
+    } 
+
+}
+
+
+raise(no,pw);
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Task 2
+var f = prompt("enter a year" , 2020)
+
+
+function leap(f){
+    var e = f%2;
+    if(e == 0){
+        document.write("it is leap year")
+    }
+    else{
+        document.write("it is not a leap year")
+    }
+}
+
+leap(f);
+
+
+
+
+
+
+//Task 3    
+var a = 2;
+var b = 5;
+var c = 10;
+var s;
+var d;
+
+function scal (a,b,c){
+    s = (a+b+c)/2;
+    d = s*(s-a)*(s-b)*(s-c);
+}
+
+function calcu(){
+    scal(a,b,c)
+}
+
+calcu()
+
+document.write("Answer is: " + d);
+
+
+
+
+
+
+
+//Task 4
+
+var mat = 50;
+
+var eng = 100;
+
+var sci = 89;
+
+
+function avg(mat,eng,sci){
+return (mat+eng,sci)/3;
+
+}
+
+function per(mat,eng,sci){
+    return (mat+eng+sci)/300*100;
+}
+
+
+function main(){
+
+
+   
+document.write("Average: "  + avg(mat,eng,sci) + "</br>")
+
+document.write("Percentage: "  + per(mat,eng,sci))
+
+}
+
+main();
+
+
+
+//Task 5
+
+var a = "my name is basit";
+
+var b = prompt("enter a character to find its index in the string");
+
+var c = [ ];
+
+for(var i = 0; i < a.length;i++){
+    if(b == a[i]){
+      a[i] += c;  
+    console.log(c[0]); 
+    }
+    // else{
+    //     document.write("you character is not in the string")
+    // }
+}
+
+
+
+//Task 6
+
+var z = "my name is hamza. I am a Developer."
+var zs = z.length;
+
+for(var i = 0; i < zs; i++){
+
+z = z.replace(/a/g , '')
+z = z.replace(/e/g , '')
+z = z.replace(/o/g , '')
+z = z.replace(/i/i , '')
+
+
+}
+
+document.write(z);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Task 8
+
+var km = prompt("Please enter distance in km")
+
+
+function cnvrtM(km){
+    return (km*10000)
+}
+
+function cnvrtF(km){
+    return (km*3280.8) 
+}
+
+function cnvrtI(km){
+    return (km*39370.07874)
+}
+
+function cnvrtC(km){
+    return (km*100000)
+}
+
+document.write(cnvrtM(km) + " Metres" + "</br>" + cnvrtF(km) + " Feets" + "</br>" + cnvrtI(km)  + " Inches " + "</br>" + cnvrtC(km)+ " Centimeters")
+
+
+
+
+
+
+
+
+// Task 9
+
+ var ov = prompt("Enter your overtime hours i will give your payment")
+ 
+
+function calculate(h){
+    return (h*120)
+}
+
+document.write("The amount you will collect is: Rs " + calculate(ov));
+
+
+
+
+//Task 10
+
+
+var cur = prompt("Enter amount to be withdrawn",4567);
+
+function money(){
+    var th = (cur[0]%1000)
+
+    var hh = (cur[1]%100);
+
+    var tt = (cur[2]%10)
+
+     var coins = (cur[3])
+
+    document.write("you will have " + th + " Thousand notes " + hh + " Hundred notes " + tt + " tens notes and " + coins + " coins" )
+
+
+
+
+}
+
+money();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

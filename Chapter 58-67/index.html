@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div>
+<h1>DOM</h1>
+<div id="form-content" class="content">
+<label for="first-name">First Name</label>
+<input type="text" id="first-name">
+<label for="last-name">Last Name</label>
+<input type="text" id="last-name">
+<label for="email">Email</label>
+<input type="text" id="email">
+</div>
+
+<div id="main-content" class="content"
+><p class="render">First Name:Alex</p
+ ><p class="render" id="lastName">Last Name: Bank</p
+ ><p class="render">Email:bigbash5050@gmail.com</p
+ ><p class="render">Country: Pakistan</p
+ ><p class="render">Contact: +92 300 1234567</p   
+ ></div>
+
+</div>
+
+
+</body>
+<script>
+
+//Task 1
+var a = document.getElementById("main-content");
+console.log(a);
+
+//Task 2 all childs of Main Content element
+
+console.log(a.childNodes);
+
+//Task3 all elements of class render 
+
+var c = document.querySelectorAll(".render");
+document.write("InnerHTML of Class Render: " + "</br>")
+for(var i =0; i <5 ; i++){
+document.write(c[i].innerHTML + "</br>")
+}
+
+//Task 4 Fill value of id first name
+var d = document.getElementById("first-name").value = "Hamza";
+
+
+//Task 5 
+var e = document.getElementById("last-name").value = "Shafiq";
+var f = document.getElementById("email").value = "Bigbash5050@gmail.com";
+
+
+//TAsk 6
+var g = document.getElementById("form-content").nodeType;
+document.write("</br>" + g);
+
+//Task 7
+var k = document.getElementById("lastName").nodeType;
+document.write("</br>" + k + "</br>");
+
+var z = document.querySelectorAll(".render");
+z[1].innerHTML = "Al-Habib";
+
+
+
+//Task 8
+var h = document.getElementById("main-content").firstChild;
+console.log(h);
+
+
+var h = document.getElementById("main-content").lastChild;
+console.log(h);
+
+
+//TAsk 9
+var y = document.getElementById("lastName").previousSibling;
+console.log(y);
+
+var y = document.getElementById("lastName").nextSibling;
+console.log(y);
+
+
+
+//Task 10
+var w = document.getElementById("email").parentNode;
+console.log(w);
+
+var w = document.getElementById("email").nodeType;
+document.write(w);
+
+</script>
+</html>
